@@ -24,7 +24,7 @@ while True:
 
     if tweetid not in toreply:
         # cleaned_prompt = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ", prompt) 
-        cleaned_prompt = cleaned_prompt.replace('AskTheFCrow', '').split()
+        cleaned_prompt = cleaned_prompt.replace(hashtag, '').split()
 
         def generateResponse():
             response = openai.Completion.create(
