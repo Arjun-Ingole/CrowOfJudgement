@@ -6,13 +6,14 @@ auth = tweepy.OAuthHandler(os.environ['CONSUMER_KEY'], os.environ['CONSUMER_SECR
 auth.set_access_token(os.environ['ACCESS_TOKEN'], os.environ['ACCESS_TOKEN_SECRET'])
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
+hashtag = '#WisdomofCrow'
 replied = []
 toreply = []
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 while True:
-    input = tweepy.Cursor(api.search_tweets, q='#AskTheFCrow', lang='en').items(1)
+    input = tweepy.Cursor(api.search_tweets, q=hashtag, lang='en').items(1)
     tweetid = 0
     prompt = ''
     for i in input:
