@@ -2,9 +2,9 @@ import re,time,os
 import tweepy
 import openai
 
-auth = tweepy.OAuthHandler(os.getenv('CONSUMER_KEY'), os.getenv('CONSUMER_SECRET'))
-auth.set_access_token(os.getenv('ACCESS_TOKEN'), os.getenv('ACCESS_TOKEN_SECRET'))
-openai.api_key = os.getenv("OPENAI_API_KEY")
+auth = tweepy.OAuthHandler(os.environ['CONSUMER_KEY'], os.environ['CONSUMER_SECRET'])
+auth.set_access_token(os.environ['ACCESS_TOKEN'], os.environ['ACCESS_TOKEN_SECRET'])
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 replied = []
 toreply = []
