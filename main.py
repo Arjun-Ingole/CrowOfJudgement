@@ -31,7 +31,7 @@ while True:
             engine="davinci-instruct-beta-v3",
             prompt=cleaned_prompt,
             temperature=0.5,
-            max_tokens=256,
+            max_tokens=500,
             top_p=1.0,
             frequency_penalty=0.0,
             presence_penalty=0.0,
