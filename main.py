@@ -23,10 +23,10 @@ while True:
         tweetid = i.id
 
     if tweetid not in toreply:
-        cleaned_prompt = cleaned_prompt = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ", prompt).split())
+        cleaned_prompt = prompt.strip()
         for i in range(len(cleaned_prompt)):
             if cleaned_prompt[i] == '#':
-                hash = cleaned_prompt[i+1:i+13]
+                hash = cleaned_prompt[i:i+13]
                 break
         cleaned_prompt = cleaned_prompt.replace(hash, '')
 
