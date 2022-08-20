@@ -6,7 +6,7 @@ auth = tweepy.OAuthHandler(os.environ['CONSUMER_KEY'], os.environ['CONSUMER_SECR
 auth.set_access_token(os.environ['ACCESS_TOKEN'], os.environ['ACCESS_TOKEN_SECRET'])
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
-hashtag = '#WisdomofCrow'
+hashtag = '#' + os.environ["HASHTAG"]
 replied = []
 toreply = []
 

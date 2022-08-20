@@ -24,10 +24,13 @@ OPENAI_API_KEY
 CONSUMER_KEY
 CONSUMER_SECRET 
 ACCESS_TOKEN 
-ACCESS_TOKEN_SECRET 
+ACCESS_TOKEN_SECRET
+HASHTAG
 ```
 
-Get keys from OpenAI and Twitter
+Get keys from OpenAI and Twitter.
+
+Hashtag, Set any hashtag you want. (No need to include '#')
 
 ## Libraries Used
 - OpenAI
